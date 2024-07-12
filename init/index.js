@@ -5,10 +5,22 @@ const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
 
+// const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+// const mapToken = process.env.MAP_TOKEN
+// const geocodingClient = mbxGeocoding({ accessToken: mapToken });
+
 // const MONGO_URL = "mongodb://127.0.0.1:27017/serenestays";
 const dbUrl = process.env.ATLASDB_URL;
 
-
+// let getcoordinates = async (location,country) => {
+//   console.log(`${location} in ${country}`);
+//   let response = await geocodingClient.forwardGeocode({
+//     query: location+", "+ country ,
+//     limit: 1
+//   }).send();
+//   console.log(response.body.features[0].geometry);
+//   return response.body.features[0].geometry;
+// };
 
 async function main() {
   await mongoose.connect(dbUrl);
