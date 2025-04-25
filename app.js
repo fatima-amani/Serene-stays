@@ -89,7 +89,7 @@ app.use( (req,res,next) => {
 });
 
 app.get("/", (req,res) => {
-  req.redirect("/listings");
+  res.redirect("/listings");
 })
 
 
